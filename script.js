@@ -13,4 +13,10 @@ GOOD LUCK 😀
 ;(function () {
   const header = document.querySelector('h1')
   header.style.color = 'red'
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue'
+  })
 })()
+
+// This works thanks to closure, by the time the "blue" function is executed the IIFE is now gone, so there should be now way to access the header variable. But we can access it thanks to closure.
